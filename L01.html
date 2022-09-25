@@ -31,10 +31,20 @@
 						.COLOR1{
 							font-size:48px;
 							font-weight: bold;
-							background: linear-gradient( #ffa69e,#faf3dd,#b8f2e6,#aed9e0,#5e6472,#6386d3);
+							background: linear-gradient(45deg,#ffa69e,#faf3dd,#b8f2e6,#aed9e0,#94d3db,#6e84b4);
 							background-size: 40%;
 							-webkit-background-clip: text;
 							-webkit-text-fill-color: transparent;
+							animation: gradient 5s infinite;
+						}
+						@keyframes gradient{
+						 0%{
+								background-position: 0% 50%;
+
+						 }
+						  100%{
+							background-position: 100% 50%;
+							}
 						}
 					</style>
 					<body>
