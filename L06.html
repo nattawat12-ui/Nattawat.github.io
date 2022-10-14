@@ -233,6 +233,71 @@
                         </p>
                         <hr>
                         <p></p>
+                        <p><b class="topiccolor"><a id="Exceptions"></a>Exceptions</b><br>
+                        <ul>
+                            <li>Exception: error that occurs While a program is running</li>
+                            <ul>
+                            <li>usually cause program to abruptly halt</li>
+                            </ul>
+                            <li>Traceback: error message that gives information regarding line numbers that caused the exception</li>
+                            <ul>
+                            <li>Indicates the type of exception and brief description of the error that caused exception to be raised</li>
+                            </ul>
+                            <li>Exception handler: code that  responds when exceptions are raised  and prevent program from crashing</li>
+                            <li>In Python, written as try/except statement <br>
+                                <pre style="background-color: rgba(250, 193, 193, 0); width: 100%;">General format:
+                                try:
+                                    statements
+                                except exceptionName:
+                                    statements
+                                </pre></li>
+                            <li>Try suite: statements that can potentially raise an exception</li>
+                            <li>Handler: statements contained in except block</li>
+                            <li>Many exceptions can be prevented by careful coding</li>
+                            <ul>
+                                <li>Example: input validation</li>
+                                <li>Usually involve a simple decision construct</li>
+                            </ul>
+                            <li>Some exceptions cannot be avoided by careful coding</li>
+                            <ul>
+                                <li>Examples</li>
+                                <ul>
+                                    <li>Trying to convert non-numeric string to an integer</li>
+                                    <li>Trying to open for reading a file that doesn't exit</li>
+                                </ul>
+                                </ul>
+                            <li>If statement in try suites raise exception:</li>
+                                <ul>
+                                    <li>Exception specified in exception clause:</li>
+                                    <ul>
+                                        <li>Handler immediately following exception clause executes</li>
+                                        <li>Continue program after try/except statament</li>
+                                    </ul>
+                                    </ul>
+                                    <li>Other exceptions </li>
+                                    <ul>
+                                        <li>Program halts with traceback error message</li>
+                                    </ul>
+                                </ul>
+                                
+                            </ul>
+                            <li>If no exception is raised, handlers are skipped</li>
+                        </ul></p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"> <a id="Handling Multiple Exceptions"></a>Handling Multiple Exceptions</b><br>
+                            <ul>
+                                <li>Often code in try suite can throw more than one type of exception</li>
+                                <ul>
+                                    <li>Need to write except clause for each type of exception that needs to be handled</li>
+                                </ul>
+                                <li>An except clause that does not list a specific exception will handle any exception that is raised in the try suite</li>
+                                <ul>
+                                    <li>Should always be last in a series of except clauses</li>
+                                </ul>
+
+                            </ul>
+                        </p>
                         
 
 
