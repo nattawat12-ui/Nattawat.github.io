@@ -40,13 +40,16 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="#Data Types">Data Types</a></li>
-							<li><a href="#Variables">Variables</a></li>
-							<li><a href="#Arimetic Operators">Arimetic Operators</a></li>
-							<li><a href="#Logical Operators">Logical Operators</a></li>
-							<li><a href="#Bitwise Operators">Bitwise Operators</a></li>
-							<li><a href="#Membership Operators">Membership Operators</a></li>
-							<li><a href="#Comments">Comments</a></li>
+							<li><a href="#Introduction">Introduction</a></li>
+							<li><a href="#Python File Open">Python File Open</a></li>
+							<li><a href="#Syntax">Syntax</a></li>
+							<li><a href="#Python Read Files">Python Read Files</a></li>
+							<li><a href="#Read Only Parts of the file">Read Only Parts of the file</a></li>
+							<li><a href="#Read Lines">Read Lines</a></li>
+							<li><a href="#Close Files">Close Files</a></li>
+                            <li><a href="#Python File Write">Python File Write</a></li>
+                            <li><a href="#Python Delete File">Python Delete File</a></li>
+                            <li><a href="#Delete Folder">Delete Folder</a></li>
 						</ul>
 					</nav>
                     <style>
@@ -65,6 +68,172 @@
                     </style>
                     <div class="container">
                         <p style="text-align: left" class="size45">Files and Exceptions</p>
+                        <p><b class="topiccolor"><a id="Introduction"></a>Introduction</b><br>
+                        File input/output 
+                        <ul>
+                            <li>For program to retain data between the times it is run, you must save the data </li>
+                            <ul>
+                                <li>Data is saved to a file, typically on computer disk</li>
+                                <li>Saved data can be retrieved and used at a later time</li></ul>
+                        
+                            <li>"Writing data to":saving data on a file</li>
+                            <li>Output file: a file that data is written to</li>
+                            <li>"Reading data from" : process of retrieving data from a file</li>
+                            <li>Input file: a file from which data is read</li>
+                        </ul>
+                        <b>Write data to file</b><br>
+                        <p></p>
+                        <center>
+                            <img src="images/file1.png" width="70%">
+                        </center>
+                        <p></p>
+                        <b>Read data from file</b><br>
+                        <p></p>
+                        <center>
+                            <img src="images/file2.png" width="70%">
+                        </center>
+                        <p></p>
+                        <b>Type of files</b><br>
+                        In general, two types of files<br>
+                        <ol class="numeric">
+                            <li>Text file: contains data that has been encoded as text</li>
+                            <li>Binary: contains data that has not been converted to text</li>
+                        </ol>
+                        Two ways to access data stored  in file<br>
+                        <ol class="numeric">
+                            <li>Sequential access: file read sequentially from beginning to end, can't skip ahead</li>
+                            <li>Direct access: can jump directly to any piece of data in the file</li>
+                        </ol>
+                        <b>File</b><br>
+                        There are always three steps that must be taken when a file is used by a program.
+                        <ul>
+                            <li>Open the file - Opening a file creates a connection between the file and the program.
+
+                                Opening an output file usually creates the file on the disk and allows the program to
+                                
+                                write data to it. Opening an input file allows the program to read data from the file.</li>
+                            <li>Process the file - In this step data is either written to the file (if it is an output file) or read
+
+                                from the file (if it is an input file).</li>
+                            <li>Close the file - When the program is finished using the file, the file must be closed.
+
+                                Closing a file disconnects the file from the program.</li>
+                        </ul>
+
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Python File Open"></a>Python File Open</b><br>
+                            File handling is an important part of any web application.<br>
+
+                            Python has several functions for creating, reading, updating, and deleting files.<br>
+                            <p></p>
+                            <b>File Handling</b><br>
+                            The key function for working with files in Python is the open() function.<br>
+                            The open() function takes two parameters; filename, and mode.<br>                               
+                            There are four different methods (modes) for opening a file:<br>
+                            <center>
+                            <p style="background-color:#f5eeb2ec; width:70%; text-align: left;">
+                                "r" - Read - Default value. Opens a file for reading, error if the file does not exist<br>
+
+                                "a" - Append - Opens a file for appending, creates the file if it does not exist<br>
+                                
+                                "w" - Write - Opens a file for writing, creates the file if it does not exist<br>
+                                
+                                "x" - Create - Creates the specified file, returns an error if the file exists<br>
+                            </p></center>
+                            In additon you can Specify if the file should be handled as binary or text mode
+                            <center><p style="background-color:#f5eeb2ec; width:70%; text-align: left;">
+                                "t" - Text - Default value. Text mode<br>
+                                "b" - Binary - Binary mode (e.g. images)
+                            </p></center>
+                            
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Syntax"></a>Syntax</b><br>
+                        To open a file for reading it is enough to specify the name of the file:
+                            <img src="images/file3.png" width="100%">
+                            <p></p>
+                        The code above is the same as:<br>
+                            <img src="images/file4.png" width="100%"><br>
+                            Because "r" for read, and "t" for text  are the default values, you do not need to specify them.
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class ="topiccolor"><a id="Python Read Files"></a>Python Read Files</b><br>
+                        <b>Open a file on the Server</b><br>
+                        Assume we have the following file, located in the same folder as Python:<br>
+                        To open the file, use the built-in open() function.<br>
+                        The open() function returns a file object, which has a read() method for reading the content of the file.
+                        <img src="images/file5.png" width="100%">
+                        <p></p>
+                        If the file is located in a different location, you will have to specify the file path, like this:
+                        <img src="images/file6.png" width="100%">
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"> <a id="Read Only Parts of the file"></a>Read Only Parts of the file</b><br>
+                        By default the read() method returns the whole text, but you can also specify how many characters you want to return:
+                            <img src="images/file7.png" width="100%">
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Read Lines"></a>Read Lines</b><br>
+                        You can return one line by using the readline() method:
+                            <img src="images/file8.png" width="100%"><br>
+                            By looping through the lines of the file, you can read the whole file, line by line:
+                            <img src="images/file9.png" width="100%">
+
+                        </p>
+                        <hr>
+                        <p></p>
+
+                        <p><b class="topiccolor"><a id="Close Files"></a>Close Files</b><br>
+                        It is a good practive to always close the file when you are done with it.
+                        <img src="images/file10.png" width="100%">
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Python File Write"></a>Python File Write</b><br>
+                        <b>Write to an Existing File</b><br>
+                        To write to an existing file, you must add a parameter to the open() function:<br>
+                        "a" - Append - will append to the end of the file<br>
+                        "w" - Write - will overwrite any existing content<br>
+                        <img src="images/file11.png" width="90%">
+                        <p></p>
+                        <img src="images/file13.png" width="90%">
+                        <p></p>
+                        <b>Create a New File</b><br>
+                        To create a new file in Python, use the open() method, with one of the following parameters:<br>
+                        "x" - Create - will create a file, returns an error if the file exist<br>
+                        "a" - Append - will create a file if the specified file does not exist<br>
+                        "w" - Write - will create a file if the specified file does not exist
+                        <img src="images/file14.png" width="100%"><br>
+                        Result: a new empty file is created!<br>
+                        <img src="images/file15.png" width="100%">
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Python Delete File"></a>Python Delete File</b><br>
+                        <b>Delete a  File</b><br>
+                            To delete a file, you must import the OS module, and run its os.remove() function:
+                            <img src="images/file16.png" width="90%"><br>
+                            <b>Check if File exits:</b><br>
+                            To avoid getting an error, you might want to check if the file exists before you try to delete it:<br>
+                            <img src="images/file17.png" width="90%">
+                        
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Delete Folder"></a>Delete Folder</b><br>
+                        To delete an entire folder, use the os.rmdir() method:<br>
+                        <img src="images/file18.png" width="90%">
+                    
+                        </p>
+                        <hr>
+                        <p></p>
+                        
 
 
 
