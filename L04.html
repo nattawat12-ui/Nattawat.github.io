@@ -43,10 +43,17 @@
 							<li><a href="#String">string</a></li>
 							<li><a href="#Assign String to a Variable">Assign String to a Variable</a></li>
 							<li><a href="#Multiline Strings">Multiline Strings</a></li>
-							<li><a href="#Logical Operators">Logical Operators</a></li>
-							<li><a href="#Bitwise Operators">Bitwise Operators</a></li>
-							<li><a href="#Membership Operators">Membership Operators</a></li>
-							<li><a href="#Comments">Comments</a></li>
+							<li><a href="#String are Arrays">String are Arrays</a></li>
+							<li><a href="#Looping Through a string">Looping Through a string</a></li>
+							<li><a href="#String Length">String Length</a></li>
+							<li><a href="#Check String">Check String</a></li>
+                            <li><a href="#Check if not">Check if not</a></li>
+                            <li><a href="#Slicing Strings">Slicing Strings</a></li>
+                            <li><a href="#Modify strings">Modify strings</a></li>
+                            <li><a href="#String Concatenation">String Concatenation</a></li>
+                            <li><a href="#Format Strings">Format Strings</a></li>
+                            <li><a href="#Escape Characters">Escape Characters</a></li>
+                            <li><a href="#String Methods">String Methods</a></li>
 						</ul>
 				    </nav>
                     <style>
@@ -83,13 +90,13 @@
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">Multiline Strings</b><br>
+                        <p><b class="topiccolor"><a id ="Multiline Strings"></a>Multiline Strings</b><br>
                             You can assign a multiline string to a variable by using three quotes:
                             <img src="images/string3.png" width="70%">
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">String are Arrays</b><br>
+                        <p><b class="topiccolor"><a id ="String are Arrays"></a>String are Arrays</b><br>
                             Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.<br>
 
                             However, Python does not have a character data type, a single character is simply a string with a length of 1.<br>
@@ -99,26 +106,26 @@
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">Looping Through a string</b><br>
+                        <p><b class="topiccolor"><a id="Looping Through a string"></a>Looping Through a string</b><br>
                             Since strings are arrays, we can loop through the characters in a string, with a for loop.
                         <img src="images/string5.png" width="70%">
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">String Length</b><br>
+                        <p><b class="topiccolor"><a id ="String Length"></a>String Length</b><br>
                             To get the length of a string, use the len() function.<br>
                             <img src="images/string6.png" width="70%">
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">Check String</b><br>
+                        <p><b class="topiccolor"><a id="Check String"></a>Check String</b><br>
                             To check if a certain phrase or character is present in a string, we can use the keyword in.
                             <img src ="images/string7.png" width="70%"> <br>
                             <img src="images/string8.png" width="70%">
                         </p>
                         <hr>
                         <p></p>
-                        <p><b class="topiccolor">Check if not</b><br>
+                        <p><b class="topiccolor"><a id="Check if not"></a>Check if not</b><br>
                             To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.
                             <img src="images/string9.png" width="70%"><br>
                             <img src="images/string10.png" width="70%">
@@ -178,18 +185,223 @@
                         <b>String Format</b><br>
                         As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:
                         <img src="images/string22.png" width="70%"><br>
+                        <p></p>
                         But we can combine strings and numbers by using the format() method!<br>
 
                         The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
                         <img src="images/string23.png" width="70%"><br>
+                        <p></p>
                         The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
                         <img src="images/string24.png" width="70%"><br>
+                        <p></p>
                         You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:
                         <img src="images/string25.png" width="70%">
 
                         </p>
                         <hr>
                         <p></p>
+                        <p><b class="topiccolor"><a id="Escape Characters"></a>Escape Characters</b><br>
+                            To insert characters that are illegal in a string, use an escape character.<br>
+
+                            An escape character is a backslash \ followed by the character you want to insert.<br>
+                            
+                            An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
+                            <img src="images/string26.png" width="70%">
+                            <p></p>
+                            To fix this problem, use the escape character \":<br>
+                            <img src="images/string27.png" width="70%">
+                            <p></p>
+                            <p>Other escape characters used in Python:</p>
+                            <center>
+                            <table style="width: 70%;">
+                                <thred >
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <th >Code</th>
+                                        <th >Result</th>
+                                        
+                                    </tr>
+                                </thred>
+                                <tbody >
+                                    <tr style="background-color:#ffffff;">
+                                        <td>\'</td><td>Single Quote</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>\\</td><td>Backslash</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>\n</td><td>	New Line</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>\r</td><td>Carriage Return</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>\t</td><td>Tab</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>\b</td><td>	Backspace</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>\f</td><td>	Form Feed</td>
+                                    </tr>
+                                    <tr style="background-color:rgb(193, 239, 250);">
+                                        <td>\ooo</td><td>Octal value</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>\xhh</td><td>Hex value</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </center>
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="String Methods"></a>String Methods</b><br>
+                        Python has a set of built-in methods that you can use on strings.</p>
+                        <center>
+                            <table style="width: 70%;">
+                                <thred >
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <th >Method</th>
+                                        <th >Description</th>
+                                        
+                                    </tr>
+                                </thred>
+                                <tbody >
+                                    <tr style="background-color:#ffffff;">
+                                        <td>capitalize()</td><td>Converts the first character to upper case</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>casefold()</td><td>Converts string into lower case</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>center()</td><td>Returns a centered string</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>count()</td><td>Returns the number of times a specified value occurs in a string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>encode()</td><td>Returns an encoded version of the string</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>endswith()</td><td>Returns true if the string ends with the specified value</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>expandtabs()</td><td>Sets the tab size of the string</td>
+                                    </tr>
+                                    <tr style="background-color:rgb(193, 239, 250);">
+                                        <td>find()</td><td>Searches the string for a specified value and returns the position of where it was found</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>format()</td><td>Formats specified values in a string</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>format_map()</td><td>Formats specified values in a string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>index()</td><td>Searches the string for a specified value and returns the position of where it was found</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>isalnum()</td><td>Returns True if all characters in the string are alphanumeric</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>isalpha()</td><td>Returns True if all characters in the string are in the alphabet</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>isdecimal()</td><td>Returns True if all characters in the string are decimals</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>isdigit()</td><td>Returns True if all characters in the string are digits</td>
+                                    </tr>
+                                    <tr style="background-color:rgb(193, 239, 250);">
+                                        <td>isidentifier()</td><td>Returns True if the string is an identifier</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>islower()</td><td>Returns True if all characters in the string are lower case</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>isnumeric()</td><td>Returns True if all characters in the string are numeric</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>isprintable()</td><td>Returns True if all characters in the string are printable</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>isspace()</td><td>Returns True if all characters in the string are whitespaces</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>istitle()</td><td>Returns True if the string follows the rules of a title</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>isupper()</td><td>Returns True if all characters in the string are upper case</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>join()</td><td>Joins the elements of an iterable to the end of the string</td>
+                                    </tr>
+                                    <tr style="background-color:rgb(193, 239, 250);">
+                                        <td>ljust()</td><td>Returns a left justified version of the string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>lower()</td><td>Converts a string into lower case</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>lstrip()</td><td>Returns a left trim version of the string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>maketrans()</td><td>Returns a translation table to be used in translations</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>partition()</td><td>Returns a tuple where the string is parted into three parts</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>replace()</td><td>Returns a string where a specified value is replaced with a specified value</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>rfind()</td><td>Searches the string for a specified value and returns the last position of where it was found</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>rindex()</td><td>Searches the string for a specified value and returns the last position of where it was found</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>rjust()</td><td>Returns a right justified version of the string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>rpartition()</td><td>Returns a tuple where the string is parted into three parts</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>rsplit()</td><td>Splits the string at the specified separator, and returns a list</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>rstrip()</td><td>Returns a right trim version of the string</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>split()</td><td>Splits the string at the specified separator, and returns a list</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>splitlines()</td><td>Splits the string at line breaks and returns a list</td>
+                                    </tr>
+                                    <tr style="background-color:rgb(193, 239, 250);">
+                                        <td>startswith()</td><td>Returns true if the string starts with the specified value</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>strip()</td><td>Returns a trimmed version of the string</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>swapcase()</td><td>Swaps cases, lower case becomes upper case and vice versa</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>title()</td><td>Converts the first character of each word to upper case</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>translate()</td><td>Returns a translated string</td>
+                                    </tr>
+                                    <tr style="background-color:#ffffff;">
+                                        <td>upper()</td><td>Converts a string into upper case</td>
+                                    </tr>
+                                    <tr style="background-color: rgb(193, 239, 250);">
+                                        <td>zfill()</td><td>Fills the string with a specified number of 0 values at the beginning</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </center>
 
  
                     </div>
