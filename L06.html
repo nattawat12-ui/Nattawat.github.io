@@ -245,7 +245,8 @@
                             </ul>
                             <li>Exception handler: code that  responds when exceptions are raised  and prevent program from crashing</li>
                             <li>In Python, written as try/except statement <br>
-                                <pre style="background-color: rgba(250, 193, 193, 0); width: 100%;">General format:
+                                
+                                <pre >General format:
                                 try:
                                     statements
                                 except exceptionName:
@@ -298,7 +299,56 @@
 
                             </ul>
                         </p>
-                        
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id ="DISPLAYING AN EXCEPTION'S DEFAULT ERROR MESSAGE"></a>DISPLAYING AN EXCEPTION'S DEFAULT ERROR MESSAGE</b><br>
+                        <ul>
+                            <li>Exception object: object created in memory when an exception is thrown</li>
+                            <ul>
+                                <li>Usually contains default error message pertaining to the exception</li>
+                                <li>Can assign the exception object to a variable in an except clause</li>
+                                <ul>
+                                    <li>Example: except ValueError as err:</li>
+                                </ul>
+                            </ul>
+                            <li>Can pass exception object variable to print function to display the default error message</li>
+                        </ul>
+                        </p>   
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="THE ELSE CLAUSE"></a>THE ELSE CLAUSE</b><br>
+                        <ul>
+                            <li>try/except statement may include an optional else clause, which appears after all the except clauses</li>
+                            <ul>
+                                <li>Aligned with try and except clauses</li>
+                                <li>Syntax similar to else clause in decision structure</li>
+                                <li>Else suite: block of statements executed after statements in try suite, only if no exceptions were raised</li>
+                                <ul>
+                                    <li>If exception was raised, the else suite is skipped</li>
+                                </ul>
+                            </ul>
+
+                        </ul></p> 
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="The Finally Clause"></a>The Finally Clause</b><br>
+                        <ul>
+                            <li>try/except statement may include an optional finally clause, which appears after all the except clauses</li>
+                            <ul>
+                                <li>Aligned with try and except clauses</li>
+                                <li>General format:<br>
+                                <pre>finally:
+                                        statements
+                                </pre></li>
+                                <li>Finally suite: block of statements after the finally clause</li>
+                                <ul>
+                                <li>Execute whether an exception occurs or not</li>
+                                <li>Purpose is to perform cleanup before exiting</li></ul>
+                            </ul>
+                        </ul>
+                        <b>Try-Except-Finally</b><br>
+                        <img src="images/try1.png" width="40%">
+                        </p>                    
 
 
 
