@@ -44,9 +44,9 @@
 							<li><a href="#Access List Items">Access List Items</a></li>
 							<li><a href="#List Methods">List Methods</a></li>
 							<li><a href="#List Comprehension">List Comprehension</a></li>
-							<li><a href="#Bitwise Operators">Bitwise Operators</a></li>
-							<li><a href="#Membership Operators">Membership Operators</a></li>
-							<li><a href="#Comments">Comments</a></li>
+							<li><a href="#Python Tuples">Python Tuples</a></li>
+							<li><a href="#Access Tuple Items">Access Tuple Items</a></li>
+							
 						</ul>
 					</nav>
                     <style>
@@ -254,6 +254,140 @@
                         </p>
                         <hr>
                         <p></p>
+                        <p><b class="topiccolor"><a id="Python Tuples"></a>Python Tuples</b><br>
+                        <b>Tuple</b><br>
+                        Tuples are used to store multiple items in a single variable.<br>
+                        Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.<br>          
+                        A tuple is a collection which is ordered and unchangeable.<br>                   
+                        Tuples are written with round brackets.<br>
+                        <img src="images/t1.png" width="90%">
+                        <p></p>
+                        <b>Tuple Items</b><br>
+                        Tuple items are ordered, unchangeable, and allow duplicate values.<br>
+                        Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+                        <p></p>
+                        <b>Ordered</b><br>
+                        When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+                        <p></p>
+                        <b>Unchangeable</b><br>
+                        Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+                        <p></p>
+                        <b>Allow Duplicates</b><br>
+                        Since tuples are indexed, they can have items with the same value:<br>
+                        <img src="images/t2.png" width="90%">
+                        <p></p>
+                        <b>Tuple Length</b><br>
+                        To determine how many items a tuple has, use the len() function:<br>
+                        <img src="images/t3.png" width="90%">
+                        <p></p>
+                        <b>Create Tuple With One Item</b><br>
+                        To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.<br>
+                        <img src="images/t4.png" width="90%">
+                        <p></p>
+                        <b>Tuple Items - Data Types</b><br>
+                        Tuple items can be of any data type:<br>
+                        <img src="images/t5.png" width="90%"><br>
+                        A tuple can contain different data types:<br>
+                        <img src="images/t6.png" width="90%">
+                        <p></p>
+                        <b>Type()</b><br>
+                        From Python's perspective, tuples are defined as objects with the data type 'tuple':<br>
+                        <img src="images/t7.png" width="90%">
+                        <p></p>
+                        <b>The tuple() Constructor</b><br>
+                        It is also possible to use the tuple() constructor to make a tuple.<br>
+                        <img src="images/t8.png" width="90%">
+                        <p></p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Access Tuple Items"></a>Access Tuple Items</b><br>
+                            <b>Access Tuple Items</b><br>
+                            You can access tuple items by referring to the index number, inside square brackets:<br>
+                            <img src="images/t9.png" width="90%">
+                            <p></p>
+                            <b>Negative Indexing</b><Br>
+                                Negative indexing means start from the end.<br>
+                                -1 refers to the last item, -2 refers to the second last item etc.<br>
+                                <img src="images/t10.png" width="90%">
+                                <p></p>
+                            <b>Range of Indexes</b><br>
+                            You can specify a range of indexes by specifying where to start and where to end the range.<br>
+                            When specifying a range, the return value will be a new tuple with the specified items.<br>
+                            <img src="images/t11.png" width="90%"><br>
+                            <img src="images/t12.png" width="90%">
+                            <p></p>
+                            <b>Change Tuple Values</b><br>
+                            Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.<br>
+                            But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.<br>
+                            <img src="images/t13.png" width="90%">
+                            <p></p>
+                            <b>Add Items</b><br>
+                            Since tuples are immutable, they do not have a build-in append() method, but there are other ways to add items to a tuple.<br>
+                            1. Convert into a list: Just like the workaround for changing a tuple, you can convert it into a list, add your item(s), and convert it back into a tuple.<br>
+                            <img src="images/t14.png" width="90%"><br>
+                            2. Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple:<br>
+                            <img src="images/t15.png" width="90%"> 
+                            <p></p>
+                            <b>Remove Items</b><br>
+                            Tuples are unchangeable, so you cannot remove items from it, but you can use the same workaround as we used for changing and adding tuple items:<br>
+                            <img src="images/t16.png" width="90%"><br>
+                            <img src="images/t17.png" width="90%">
+                            <p></p>
+                            <b>Using Asterisk*</b><br>
+                            If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:<br>
+                            <img src="images/t18.png" width="90%">
+                            <p></p>
+                            <b>Loop Through a Tuple</b><br>
+                            You can loop through the tuple items by using a for loop.<br>
+                            <img src="images/t19.png" width="90%">
+                            <p></p>
+                            <b>Loop Through the Index Numbers</b><br>
+                            You can also loop through the tuple items by referring to their index number.<br>
+                            Use the range() and len() functions to create a suitable iterable.<br>
+                            <img src="images/tu1.png" width="90%">
+                            <p></p>
+                            <b>Using a While Loop</b><br>
+                            You can loop through the list items by using a while loop.<br>
+                            Use the len() function to determine the length of the tuple, then start at 0 and loop your way through the tuple items by refering to their indexes.<br>                          
+                            Remember to increase the index by 1 after each iteration.<br>
+                            <img src="images/tu2.png" width="90%">
+                            <p></p>
+                            <b>Multiply Tuples</b><br>
+                            If you want to multiply the content of a tuple a given number of times, you can use the * operator:<br>
+                            <img src="images/tu3.png" width="90%">
+                            <p></p>
+                            <hr>
+                            <p> </p>
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </p>
 
 
                     </div>
