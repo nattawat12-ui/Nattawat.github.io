@@ -40,9 +40,9 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="#Python Lists">Python Lists</a></li>
-							<li><a href="#Access List Items">Access List Items</a></li>
-							<li><a href="#List Methods">List Methods</a></li>
+							<li><a href="#Python Dictionary">Python Dictionary</a></li>
+							<li><a href="#Access Items">Access Items</a></li>
+							<li><a href="#Python Set">Python Set</a></li>
 							<li><a href="#List Comprehension">List Comprehension</a></li>
 							<li><a href="#Bitwise Operators">Bitwise Operators</a></li>
 							<li><a href="#Membership Operators">Membership Operators</a></li>
@@ -63,6 +63,154 @@
                         }
                         
                     </style>
+                    <div class="container">
+                        <p style="text-align: left" class="size45">Dictionary and Set</p>
+                        <p><b class="topiccolor"><a id="Python Dictionary"></a>Python Dictionary</b><br>
+                        <b>Dictionary</b><br>
+                        Dictionary are used to store data values in key:value pair.<br>
+                        A Dictionary is a collection which is ordered*, changeable and do not allow duplicates.<br>
+                        Dictionary are written with  curly  blackets, and have keys and values:<br>
+                        <img src="images/d1.png" width="90%">
+                        <p></p>
+                        <b>Nested Dictionaries</b><br>
+                        A dictionary can contain dictionaries, this is called nested dictionaries.<br>
+                        <img src="images/di5.png" width="90%">
+                        <p></p>
+                        <b>Dictionary Items</b><br>
+                        Dictionary items are ordered, changeable, and does not allow duplicates.<br>
+                        Dictionary items are presented in key:value pairs, and can be referred to by using the key name.<br>
+                        <img src="images/d2.png" width="90%">
+                        <p></p>
+                        <b>Ordered or Unordered?</b><br>
+                        When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.<br>
+                        Unordered means that the items does not have a defined order, you cannot refer to an item by using an index.<br>
+                        <p></p>
+                        <b>Changeable</b><br>
+                        Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+                        <p></p>
+                        <b>Duplicates Not Allowed</b><br>
+                        Dictionaries cannot have two items with the same key:<br>
+                        <img src="images/d3.png" width="90%">
+                        <p></p>
+                        <b>Dictionary Length</b><br>
+                        To determine how many items a dictionary has, use the len() function:<br>
+                        <img src="images/d4.png" width="90%">
+                        <p></p>
+                        <b>Dictionary Items - Data Types</b><br>
+                        The values in dictionary items can be of any data type:<br>
+                        <img src="images/d5.png" width="90%">
+                        <p></p>
+                        <b>type()</b><br>
+                        From Python's perspective, dictionaries are defined as objects with the data type 'dict':<br>
+                        <img src="images/d6.png" width="90%">
+                        <p></p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Access Items"></a>Access Items</b><br>
+                        <b>Accessing Items</b><br>
+                        You can access the items of a dictionary by referring to its key name, inside square brackets:<br>
+                        <img src="images/d7.png" width="90%"><br>
+                        There is also a method called get() that will give you the same result:<br>
+                        <img src="images/d8.png" width="90%">
+                        <p></p>
+                        <b>Get Keys</b><br>
+                        The keys() method will return a list of all the keys in the dictionary.<br>
+                        <img src="images/d9.png" width="90%">
+                        <p></p>
+                        <b>Get Values</b><br>
+                        The values() method will return a list of all the values in the dictionary.<br>
+                        <img src="images/d10.png" width="90%">
+                        <p></p>
+                        <b>Get Items</b><br>
+                        The items() method will return each item in a dictionary, as tuples in a list.<br>
+                        <img src="images/di1.png" width="90%">
+                        <p></p>
+                        <b>Change Values</b><br>
+                        You can change the value of a specific item by referring to its key name:<br>
+                        <img src="images/di2.png" width="90%">
+                        <p></p>
+                        <b>Update Dictionary</b><br>
+                        The update() method will update the dictionary with the items from the given argument.<br>
+                        The argument must be a dictionary, or an iterable object with key:value pairs.<br>
+                        <img src="images/di3.png" width="90%">
+                        <p></p>
+                        <b>Loop Through a Dictionary</b> <br>
+                        You can loop through a dictionary by using a for loop.<br>
+                        When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.<br>
+                        <img src="images/di4.png" width="90%">
+                        <p></p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Python Set"></a>Python Set</b><br>
+                        <b>Set</b><br>
+                        Sets are used to store multiple items in a single variable.<br>
+                        Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.<br>
+                        A set is a collection which is unordered, unchangeable*, and unindexed.<br>
+                        <b>Set Items</b><br>
+                        Set items are unordered, unchangeable, and do not allow duplicate values.
+                        <p></p>
+                        <hr>
+                        <p></p>
+                        <p><b class="topiccolor"><a id="Access Set Items"></a>Access Set Items</b><br>
+                            <b>Loop Items</b><br>
+                            You can loop through the set items by using a for loop:<br>
+                            <img src="images/s1.png" width="90%">
+                            <p></p>
+                            <b>Join Two Sets</b><br>
+                            There are several ways to join two or more sets in Python.<br>
+                            You can use the union() method that returns a new set containing all items from both sets, or the update() method that inserts all the items from one set into another:<br>
+                            <img src="images/s2.png" width="90%">
+                            <p></p>
+                            <b>Keep ONLY the Duplicates</b><br>
+                            The intersection_update() method will keep only the items that are present in both sets.<br>
+                            <img src="images/s3.png" width="90%"><br>
+                            The intersection() method will return a new set, that only contains the items that are present in both sets.<br>
+                            <img src="images/s4.png" width="90%">
+                            <p></p>
+                            <b>Keep All, But NOT the Duplicates</b><br>
+                            The symmetric_difference_update() method will keep only the elements that are NOT present in both sets.<br>
+                            <img src="images/s5.png" width="90%"><br>
+                            The symmetric_difference() method will return a new set, that contains only the elements that are NOT present in both sets.<br>
+                            <img src="images/s6.png" width="90%">
+                            <p></p>
+                            <b>Remove Item</b><br>
+                            To remove an item in a set, use the remove(), or the discard() method.<br>
+                            <img src="images/s7.png" width="90%">
+                            <p></p>
+                            <img src="images/s8.png" width="90%">
+
+
+
+
+
+                        </p>
+
+
+                        
+
+
+
+
+
+                        
+
+                        
+                        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
